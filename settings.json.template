@@ -91,16 +91,17 @@
   },
 
   // market settings
-  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex, coinexchange
+  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex, coinexchange, tradeogre
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "CHC",
+    "coin": "DOGE",
     "exchange": "BTC",
-    "enabled": ["cryptopia"],
     "cryptopia_id": "2186",
+    "enabled": ["tradeogre"],
     "ccex_key" : "Get-Your-Own-Key",
     "coinexchange_id": "18",
-    "default": "cryptopia"
+    "default": "tradeogre"
+    "tradeogre_id": "BTC-DOGE",
   },
 
   // richlist/top100 settings
