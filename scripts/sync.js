@@ -144,8 +144,8 @@ is_locked(function (exists) {
                     });
                   }
                   if (mode == 'reindex') {
-                    Tx.remove({}, function(err) { 
-                      Address.remove({}, function(err2) { 
+                    Tx.deleteMany({}, function(err) { 
+                      Address.deleteMany({}, function(err2) { 
                         Richlist.updateOne({coin: settings.coin}, {
                           received: [],
                           balance: [],
