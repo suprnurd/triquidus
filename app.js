@@ -1,6 +1,6 @@
 var express = require('express')
   , path = require('path')
-  , chaincoinapi = require('chaincoin-node-api')
+  , coinapi = require('chaincoin-node-api')
   , favicon = require('static-favicon')
   , logger = require('morgan')
   , cookieParser = require('cookie-parser')
@@ -14,10 +14,10 @@ var express = require('express')
 
 var app = express();
 
-// chaincoinapi
-chaincoinapi.setWalletDetails(settings.wallet);
+// coin api
+coinapi.setWalletDetails(settings.wallet);
 if (settings.heavy != true) {
-  chaincoinapi.setAccess('only', ['getinfo', 'getnetworkhashps', 'getmininginfo','getdifficulty', 'getconnectioncount',
+  coinapi.setAccess('only', ['getinfo', 'getnetworkhashps', 'getmininginfo','getdifficulty', 'getconnectioncount',
   'getmasternodecount', 'getmasternodecountonline', 'getmasternodelist', 'getvotelist', 'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction', 
   'getpeerinfo', 'gettxoutsetinfo']);
 } else {
@@ -33,7 +33,7 @@ if (settings.heavy != true) {
     getsupply - Returns the current money supply.
     getmaxmoney - Returns the maximum possible money supply.
   */
-  chaincoinapi.setAccess('only', ['getinfo', 'getstakinginfo', 'getnetworkhashps', 'getdifficulty', 'getconnectioncount',
+  coinapi.setAccess('only', ['getinfo', 'getstakinginfo', 'getnetworkhashps', 'getdifficulty', 'getconnectioncount',
     'getmasternodecount', 'getmasternodecountonline', 'getmasternodelist', 'getvotelist', 'getblockcount', 'getblockhash', 
     'getblock', 'getrawtransaction', 'getmaxmoney', 'getvote', 'getmaxvote', 'getphase', 'getreward', 'getpeerinfo', 
     'getnextrewardestimate', 'getnextrewardwhenstr', 'getnextrewardwhensec', 'getsupply', 'gettxoutsetinfo']);
@@ -50,7 +50,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
-app.use('/api', chaincoinapi.app);
+app.use('/api', coinapi.app);
 app.use('/', routes);
 app.use('/ext/getmoneysupply', function(req,res){
   lib.get_supply(function(supply){

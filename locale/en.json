@@ -43,7 +43,7 @@
 
     // global
     "difficulty": "Difficulty",
-    "masternodecount": "Master Nodes",
+    "masternodecount": "Masternodes",
     "network": "Network",
     "height": "Height",
     "timestamp": "Timestamp",
@@ -81,7 +81,7 @@
     "net_protocol": "Protocol",
     "net_subversion": "Sub-version",
     "net_country": "Country",
-    "net_warning": "This is sub sample of the network based on wallets that have connected to this node in the last 24hours.",
+    "net_warning": "This is a sub sample of the network based on wallets that have connected to this node in the last 24 hours.",
 
     // api view
     "api_title": "API Documentation",
@@ -90,9 +90,9 @@
     "api_getnetworkhashps": "Returns the current network hashrate. (hash/s)",
     "api_getdifficulty": "Returns the current difficulty.",
     "api_getconnectioncount": "Returns the number of connections the block explorer has to other nodes.",
-    "api_getmasternodelist": "Returns the complete master node list.",
-    "api_getmasternodecount": "Returns the total number of master nodes on the network.",
-    "api_getmasternodecountonline": "Returns the number of master nodes on the network that are currently online.",
+    "api_getmasternodelist": "Returns the complete masternode list.",
+    "api_getmasternodecount": "Returns the total number of masternodes on the network.",
+    "api_getmasternodecountonline": "Returns the number of masternodes on the network that are currently online.",
     "api_getvotelist":  "Returns the current vote list.",
     "api_getblockcount": "Returns the current block index.",
     "api_getblockhash": "Returns the hash of the block at ; index 0 is the genesis block.",
